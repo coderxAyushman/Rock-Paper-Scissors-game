@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rock-Paper-Scissors game</title>
+	<script src="Index.js"></script>
+	<style type="text/css">
+		body{
+			background-color: black;
+			color: white;
+		}
+		.head{
+			margin-top: 1px;
+			font-size: 24pt;
+		}
+		.container{
+			text-align: center;
+			padding: 5px;
+			position: absolute;
+			top: 23%;
+			bottom: 23%;
+			right: 23%;
+			left: 23%;
+			border: 10px dotted white;
+		}
+		img{
+			height: 100px;
+			width: 100px;
+			background-color: black;
+			user-select: none;
+		}
+		.b-tt{
+			cursor: pointer;
+			border: 3px solid white;
+			margin-right: 3px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+		.reset{
+             border: none;
+             color: white;
+             background-color: orange;
+             border-radius: 4px;
+             cursor: pointer;
+             margin-top: 5px;
+			margin-bottom: 5px;
+			width: 105px;
+			height: 36px;
+		}
+		.reset:hover{
+			opacity: 0.7;
+		}
+		.g{
+			color: yellow;
+		}
+		.h{
+			color: lightblue;
+		}
+		.i{
+			color: orange;
+		}
+	</style>
+</head>
+<body>
+     <div class="container">
+     	<p class="head">
+     	   <samp class="g">ROCK</samp>-<samp class="h">PAPER</samp>-<samp class="i">SCISSORS</samp>
+        </p>
+           <button class="b-tt" onclick="Rock()">
+           	<img id="stone" src="https://supersimple.dev/projects/rock-paper-scissors/images/rock-emoji.png"/>
+           </button>  <button class="b-tt" onclick="Paper()">
+            <img id="paper" src="https://supersimple.dev/projects/rock-paper-scissors/images/paper-emoji.png"/>	
+           </button>  <button class="b-tt" onclick="Scissors()">
+           	<img id="Scissors" src="https://supersimple.dev/projects/rock-paper-scissors/images/scissors-emoji.png">
+           </button>
+           <br/>
+           <p id="result">
+           	Please choose your weapon!
+           </p>
+           <button class="reset" onclick="alert('Reload the page')">Reset Score</button>
+           <br/>
+     </div>
+</body>
+</html>
