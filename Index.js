@@ -1,3 +1,16 @@
+ let scores = JSON.parse(localStorage.getItem('scores')) || {
+      wins: 0,
+      losses: 0,
+      ties: 0
+ } 
+
+function resetScore(){
+	scores.wins = 0
+	scores.losses = 0
+	scores.ties = 0
+	localStorage.removeItem('scores');
+	document.location.reload(); 
+}
 
 function playGame(playerMove){
 	let computerMove = pickcomputerMove();
@@ -24,23 +37,20 @@ function playGame(playerMove){
         else if (computerMove === 'Paper') {result1 = 'You win'}
      }
 
-    const scores = {
-	  wins: 0,
-	  looses: 0,
-	  ties: 0,
-     }
-     
     if(result1 === 'You win') {scores.wins++;}
-    else if (result1 === 'You loose') {scores.looses++;}
+    else if (result1 === 'You loose') {scores.losses++;}
     else if (result1 === 'It is a Tie') {scores.ties++;}
+    
+    localStorage.setItem('scores', JSON.stringify(scores));
+
      var score = document.getElementById('score');
-     result.textContent = `you picked ${playerMove}. Computer picked ${computerMove}. ${result1}.`
-      score.textContent = `Wins: ${scores.wins}, Losses: ${scores.looses}, Ties: ${scores.ties}.`                          
+     var score1 = document.getElementById('score1');
+     var score2 = document.getElementById('score2');
+     result.textContent = `you picked ${playerMove}. Computer picked ${computerMove}. ${result1}.`;
+      score.textContent = `${scores.wins},`;
+      score1.textContent = `${scores.losses},`;
+      score2.textContent = `${scores.ties}.`;                          
 }
-
-
-
-
 
 function pickcomputerMove(){
 	const randomNumber = Math.random();

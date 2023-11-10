@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Rock-Paper-Scissors game</title>
 	<script src="Index.js"></script>
+	<link rel="icon" href="file:///C:/Users/Rituparna/Desktop/coding/Ayushman.jpg" type="image/icon type">
 	<style type="text/css">
 		body{
 			background-color: black;
@@ -84,8 +85,9 @@
            	Please choose your weapon!
            </p>
            <br/>
-            <p id="score" class="text">SCORE</p>
-           <button class="reset" onclick="alert('Reload the page')">Reset Score</button>
+            <p class="text">wins: <span id="score" >0</span> losses: <span id="score1" >0</span> ties: <span id="score2" >0</span></p>
+           <button class="reset" onclick="resetScore()">Reset Score
+	        </button>
            <br/>
      </div>
 </body>
