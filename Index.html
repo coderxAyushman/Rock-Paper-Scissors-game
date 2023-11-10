@@ -17,7 +17,7 @@
 		}
 		.container{
 			text-align: center;
-			padding: 5px;
+			padding: 3px;
 			position: absolute;
 			top: 23%;
 			bottom: 23%;
@@ -44,8 +44,8 @@
              background-color: orange;
              border-radius: 4px;
              cursor: pointer;
-             margin-top: 5px;
-			margin-bottom: 5px;
+             margin-top: 2px;
+			margin-bottom: 3px;
 			width: 105px;
 			height: 36px;
 		}
@@ -61,6 +61,10 @@
 		.i{
 			color: orange;
 		}
+		.text{
+			margin-top: 1px;
+			margin-bottom: 2px;
+		}
 	</style>
 </head>
 <body>
@@ -68,17 +72,19 @@
      	<p class="head">
      	   <samp class="g">ROCK</samp>-<samp class="h">PAPER</samp>-<samp class="i">SCISSORS</samp>
         </p>
-           <button class="b-tt" onclick="Rock()">
+           <button class="b-tt" onclick="playGame('Rock')">
            	<img id="stone" src="https://supersimple.dev/projects/rock-paper-scissors/images/rock-emoji.png"/>
-           </button>  <button class="b-tt" onclick="Paper()">
+           </button>  <button class="b-tt" onclick="playGame('Paper')">
             <img id="paper" src="https://supersimple.dev/projects/rock-paper-scissors/images/paper-emoji.png"/>	
-           </button>  <button class="b-tt" onclick="Scissors()">
+           </button>  <button class="b-tt" onclick="playGame('Scissors')">
            	<img id="Scissors" src="https://supersimple.dev/projects/rock-paper-scissors/images/scissors-emoji.png">
            </button>
            <br/>
-           <p id="result">
+           <p class="text" id="result">
            	Please choose your weapon!
            </p>
+           <br/>
+            <p id="score" class="text">SCORE</p>
            <button class="reset" onclick="alert('Reload the page')">Reset Score</button>
            <br/>
      </div>
